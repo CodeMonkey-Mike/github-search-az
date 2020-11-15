@@ -10,34 +10,35 @@ interface IFilterProps {
   loading?: boolean;
 }
 
-export const Filter = ({loading, onClick = () => {} }: IFilterProps) => {
+export const Filter = ({ loading, onClick = () => {} }: IFilterProps) => {
   const [active, setActive] = useState('');
   return (
     <FilterContainer data-testid="filter-area">
       <FilterTitle>Filter by:</FilterTitle>
       {loading ? (
-        <FilterContent><Skeleton width={300} count={1}/></FilterContent>
+        <FilterContent>
+          <Skeleton width={300} count={1} />
+        </FilterContent>
       ) : (
         <FilterContent>
-        {types.map((type: string, i:number) => (
-          <Pill
-            key={i}
-            active={active === type}
-            onClick={() => {
-              onClick(type);
-              if (active && type === active) {
-                setActive('');
-              } else {
-                setActive(type);
-              }
-            }}
-          >
-            {upperFirst(type)}
-          </Pill>
-        ))}
-      </FilterContent>
+          {types.map((type: string, i: number) => (
+            <Pill
+              key={i}
+              active={active === type}
+              onClick={() => {
+                onClick(type);
+                if (active && type === active) {
+                  setActive('');
+                } else {
+                  setActive(type);
+                }
+              }}
+            >
+              {upperFirst(type)}
+            </Pill>
+          ))}
+        </FilterContent>
       )}
-      
     </FilterContainer>
   );
 };

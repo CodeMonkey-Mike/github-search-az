@@ -24,12 +24,38 @@ export const Code: React.FC = (props) => {
 
 export const ChevronRight: React.FC = (props) => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' {...props}  viewBox='0 0 512 512'><title>Chevron Forward Circle</title><path d='M64 256c0 106 86 192 192 192s192-86 192-192S362 64 256 64 64 150 64 256z' fill='none' stroke='currentColor' strokeMiterlimit='10' stroke-width='32'/><path fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M216 352l96-96-96-96'/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" {...props} viewBox="0 0 512 512">
+      <title>Chevron Forward Circle</title>
+      <path
+        d="M64 256c0 106 86 192 192 192s192-86 192-192S362 64 256 64 64 150 64 256z"
+        fill="none"
+        stroke="currentColor"
+        strokeMiterlimit="10"
+        stroke-width="32"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="32"
+        d="M216 352l96-96-96-96"
+      />
+    </svg>
   );
 };
 
 export const Star: React.FC = (props) => {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' {...props} viewBox='0 0 512 512'><title>Star</title><path d='M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-width='32'/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" {...props} viewBox="0 0 512 512">
+      <title>Star</title>
+      <path
+        d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+        fill="none"
+        stroke="currentColor"
+        stroke-linejoin="round"
+        stroke-width="32"
+      />
+    </svg>
   );
 };

@@ -1,23 +1,34 @@
 import React, { useState } from 'react';
 import { Header, Heading } from './style';
-import {Search} from './Search';
+import { Search } from './Search';
 
 interface IHeaderProps {
-  onChangeTheme: () => void; 
+  onChangeTheme: () => void;
 }
 
-const Main  = ({onChangeTheme }: IHeaderProps) => {
+const Main = ({ onChangeTheme }: IHeaderProps) => {
   const [checked, setChecked] = useState(false);
   return (
     <>
-      <Header data-testid='header'>
-        <div className="switch-container" data-testid='switch-button'>
-            <label>
-              <input checked={ checked } onChange={() => {onChangeTheme(); setChecked(!checked)}} className="switch" type="checkbox" />
-              <div> <div></div> </div>
-            </label>
+      <Header data-testid="header">
+        <div className="switch-container" data-testid="switch-button">
+          <label>
+            <input
+              checked={checked}
+              onChange={() => {
+                onChangeTheme();
+                setChecked(!checked);
+              }}
+              className="switch"
+              type="checkbox"
+            />
+            <div>
+              {' '}
+              <div></div>{' '}
+            </div>
+          </label>
         </div>
-        <Heading data-testid='Heading'>
+        <Heading data-testid="Heading">
           Github <sup>Search</sup>
         </Heading>
       </Header>
@@ -26,4 +37,4 @@ const Main  = ({onChangeTheme }: IHeaderProps) => {
   );
 };
 
-export {Main as Header};
+export { Main as Header };

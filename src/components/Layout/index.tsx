@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from './style';
-import {Header} from '../';
+import { Header } from '../';
 import { ThemeName } from '../../styles/themes';
 import { Container } from '../../styles/Container';
 
@@ -11,13 +11,13 @@ interface LayoutProps {
 }
 
 const Main = ({ children, themeName, setThemeName }: LayoutProps) => {
-  const toggleTheme = () => { 
+  const toggleTheme = () => {
     setThemeName(themeName === 'light' ? 'dark' : 'light');
-      localStorage.setItem('@aztheme', themeName === 'light' ? 'dark' : 'light');
+    localStorage.setItem('@aztheme', themeName === 'light' ? 'dark' : 'light');
   };
   return (
-    <Layout id='layout' data-testid="layout">
-      <Header onChangeTheme={toggleTheme}/>
+    <Layout id="layout" data-testid="layout">
+      <Header onChangeTheme={toggleTheme} />
       <Container>{children}</Container>
     </Layout>
   );

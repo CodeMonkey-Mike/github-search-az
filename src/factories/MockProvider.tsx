@@ -1,5 +1,4 @@
- 
-import configureMockStore from 'redux-mock-store'; 
+import configureMockStore from 'redux-mock-store';
 
 export const mockStore = configureMockStore();
 export const store = mockStore({
@@ -8,5 +7,5 @@ export const store = mockStore({
     result: null,
     error: null,
     query: null,
-  }
-});  
+  },
+});

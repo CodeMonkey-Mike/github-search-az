@@ -10,4 +10,4 @@ export const grey200 = 'rgb(241,241,242)';
 export const positive = 'rgb(64,249,155)';
 export const negative = 'rgb(238,96,85)';
 export const warning = 'rgb(250,188,60)';
-export const accent = 'rgb(155,189,249)'; 
+export const accent = 'rgb(155,189,249)';

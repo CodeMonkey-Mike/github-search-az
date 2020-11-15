@@ -33,7 +33,9 @@ export default () => {
           <Filter loading={loading} onClick={onFilter} />
         </GridCell>
       </Grid>
-      <List loading={loading}>{data ? <Item data={data} /> : <Para style={{textAlign: 'center'}}>No search found</Para>}</List>
+      <List loading={loading}>
+        {data ? <Item data={data} /> : <Para style={{ textAlign: 'center' }}>No search found</Para>}
+      </List>
     </>
   );
 };

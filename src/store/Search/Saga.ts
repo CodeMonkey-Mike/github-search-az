@@ -1,7 +1,7 @@
 import { put, call } from 'redux-saga/effects';
 import * as searchService from '../../services';
 
-import { Actions } from './Actions'; 
+import { Actions } from './Actions';
 
 export function* search({ query }: any) {
   try {

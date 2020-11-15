@@ -27,7 +27,7 @@ const Main = () => {
   useMemo(() => !q && dispatch(Actions.searchReset()), [q, dispatch]);
 
   return (
-    <SearchContainer data-testid='search-wrapper'>
+    <SearchContainer data-testid="search-wrapper">
       <Search>
         {q ? (
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={() => setQ('')}>
@@ -61,7 +61,7 @@ const Main = () => {
           </svg>
         )}
         <input
-          data-testid='search-input'
+          data-testid="search-input"
           type="text"
           name="searchInput"
           id="searchInput"
@@ -75,4 +75,4 @@ const Main = () => {
   );
 };
 
-export {Main as Search};
+export { Main as Search };
