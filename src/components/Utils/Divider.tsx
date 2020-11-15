@@ -15,7 +15,7 @@ const Instance = styled.div<IDivider>`
   max-width: ${({ fluid }) => (!fluid ? 'auto' : '1280px')};
   margin-top: ${({ marginTop }) => (marginTop ? marginTop : 0)}px;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
 `;
 
 export const Divider = (props: IDivider) => <Instance {...props} />;

@@ -42,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    ${props => {
+    ${(props) => {
       const { theme } = props;
       console.log(props);
       let append = '';

@@ -6,13 +6,15 @@ import { Para } from '../../styles/Para';
 
 export const ItemContainer = styled.div``;
 
-export const WrapLink = styled.div<{isMobile:boolean}>`
-  display:flex;
-  justify-content: ${({isMobile}) => isMobile ? 'center' : 'flex-end'};
-  margin-bottom: ${({isMobile}) => isMobile ? '10px' : '0'};
+export const WrapLink = styled.div<{ isMobile: boolean }>`
+  display: flex;
+  justify-content: ${({ isMobile }) => (isMobile ? 'center' : 'flex-end')};
+  margin-bottom: ${({ isMobile }) => (isMobile ? '10px' : '0')};
   align-items: center;
   height: 100%;
-  ${({isMobile}) => isMobile && `
+  ${({ isMobile }) =>
+    isMobile &&
+    `
     a {
       &.explore-link {
         max-width: 200px;
@@ -65,9 +67,9 @@ export const AttributeWrapper = styled.div`
 `;
 
 export const Attribute = styled.div`
-display: flex;
-    align-items: center;
-  width: 100px; 
+  display: flex;
+  align-items: center;
+  width: 100px;
   margin-right: 20px;
   svg {
     height: 22px;
@@ -76,10 +78,11 @@ display: flex;
 `;
 
 export const LanguageCircle = styled.div<IAttributeProps>`
-  display:inline-block;
+  display: inline-block;
   height: 15px;
   width: 15px;
   margin-right: 5px;
   border-radius: 10px;
-  ${({ language }) => language && `background-color: ${_get(languageColors, (language.toLowerCase()).toString())};`}
+  ${({ language }) =>
+    language && `background-color: ${_get(languageColors, language.toLowerCase().toString())};`}
 `;

@@ -1,9 +1,17 @@
-import React from 'react'; 
+import React from 'react';
 import { Grid, GridCell } from '../../styles/Grid';
 import { isMobile } from '../../styles/isMobile';
 import { ChevronRight, Fork, Star } from '../Icons';
 import { Divider } from '../Utils';
-import { ItemContainer, Link, Description, AttributeWrapper, Attribute, WrapLink, LanguageCircle } from './style';
+import {
+  ItemContainer,
+  Link,
+  Description,
+  AttributeWrapper,
+  Attribute,
+  WrapLink,
+  LanguageCircle,
+} from './style';
 
 export interface IItem {
   id: number;
@@ -30,31 +38,36 @@ const Item = ({ data }: LayoutProps) => {
             }}
             variant={isMobile() ? 'sm' : 'lg'}
           >
-            <GridCell span={isMobile() ? '16':'10'}>
+            <GridCell span={isMobile() ? '16' : '10'}>
               <Link href={item.html_url} target="_blank">
                 {item.full_name}
               </Link>
-              <Description>{item.description}</Description> 
+              <Description>{item.description}</Description>
             </GridCell>
             <GridCell span={isMobile() ? '16' : '6'}>
               <WrapLink isMobile={isMobile()}>
                 <Link className={'explore-link'} href={item.html_url} target="_blank">
                   Explore <ChevronRight />
-                </Link> 
+                </Link>
               </WrapLink>
             </GridCell>
             <GridCell span={'16'}>
               <AttributeWrapper>
-                { item.language && <Attribute >
-                  <LanguageCircle language={item.language} />
-                  <span>{item.language}</span>
-                </Attribute>}
-                
+                {item.language && (
+                  <Attribute>
+                    <LanguageCircle language={item.language} />
+                    <span>{item.language}</span>
+                  </Attribute>
+                )}
+
                 <Attribute>
                   <Fork />
                   <span>{item.forks_count}</span>
                 </Attribute>
-                <Attribute><Star /><span>{item.stargazers_count}</span></Attribute>
+                <Attribute>
+                  <Star />
+                  <span>{item.stargazers_count}</span>
+                </Attribute>
               </AttributeWrapper>
             </GridCell>
           </Grid>

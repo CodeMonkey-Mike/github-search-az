@@ -22,5 +22,3 @@ export const Heading = styled.h1`
     color: ${colors.grey500};
   }
 `;
-
-
