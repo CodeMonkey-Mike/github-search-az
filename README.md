@@ -26,11 +26,34 @@ Test:
  
 
 ## How can run the app
-TBD
+
+(Live demo)[https://github-search-az.herokuapp.com/]
+
+If you would like run the app under local try with these step:
+
+```
+yarn && yarn dev
+```
 
 ## Architecure explains
 
 ### Folder structure
 
+```
+Root/
+    src/
+        components/
+        configs/
+        factories/
+        pages/
+        services/
+        store/
+        styles/
+        App.tsx
+        index.tsx
+```
+
+
 ### Search and filter functionality
 
+TBD
