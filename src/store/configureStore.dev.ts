@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose, Store } from 'redux';
-import createSagaMiddleware from 'redux-saga'; 
+import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory, History } from 'history';
 import { routerMiddleware, routerActions } from 'connected-react-router';
 import { createLogger } from 'redux-logger';
@@ -43,7 +43,7 @@ const configureStore = (initialState: AppState): Store<AppState> => {
   const actionCreators = {
     ...routerActions,
   };
-  
+
   /* eslint-disable no-underscore-dangle */
 
   // prettier-ignore
@@ -60,7 +60,7 @@ const configureStore = (initialState: AppState): Store<AppState> => {
   const enhancer = composeEnhancers(...enhancers);
 
   // Create Store
-  const store = createStore(createRootReducer(history), initialState, enhancer); 
+  const store = createStore(createRootReducer(history), initialState, enhancer);
   sagaMiddleware.run(rootSaga);
   return store;
 };

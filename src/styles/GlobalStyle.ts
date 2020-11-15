@@ -23,7 +23,9 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     box-sizing: border-box;
     color: ${grey500};
     font-size: 1rem;
@@ -37,6 +39,19 @@ export const GlobalStyle = createGlobalStyle`
       background-color: #BCBEC0;
       border-radius:10px;
     }
+  }
+
+  :root {
+    ${props => {
+      const { theme } = props;
+      console.log(props);
+      let append = '';
+      // Object.entries(theme).forEach(([prop, value]) => {
+      //   append += `--${prop}: ${value};`;
+      // });
+
+      return append;
+    }}
   }
 
   h1,

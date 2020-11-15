@@ -1,10 +1,9 @@
 import { put, call } from 'redux-saga/effects';
 import * as searchService from '../../services';
 
-import { Actions } from './Actions';
-import { searchRequest } from './Reducer';
+import { Actions } from './Actions'; 
 
-export function* search({query}: any) {
+export function* search({ query }: any) {
   try {
     const { data } = yield call(searchService.getRepos, query);
     yield put(Actions.searchRequestSuccess(data, query));
@@ -13,7 +12,7 @@ export function* search({query}: any) {
   }
 }
 
-export function* filter({filter}: any) {
+export function* filter({ filter }: any) {
   try {
     const { data } = yield call(searchService.filterRepos, filter);
     yield put(Actions.searchRequestSuccess(data, filter.query));

@@ -1,4 +1,4 @@
-import axios from 'axios'; 
+import axios from 'axios';
 import { API, AUTH_TOKEN } from '../configs';
 
 const _apiClient = axios.create({
@@ -27,13 +27,11 @@ _apiClient.interceptors.response.use(
       const { messages = [] } = error.response.data;
 
       if (messages.length > 0) {
-        throw messages
-          .map((mgs: { message: string }) => mgs.message)
-          .join('\n');
+        throw messages.map((mgs: { message: string }) => mgs.message).join('\n');
       }
     }
     throw error;
-  },
+  }
 );
 
 export const apiClient = _apiClient;

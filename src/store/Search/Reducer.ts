@@ -1,12 +1,11 @@
 import { createReducer } from 'reduxsauce';
+import { IItem } from '../../components';
 import { Types } from './Actions';
 
-export interface ISearch {
-
-}
+export interface ISearch {}
 
 export interface ISearchState {
-  result: ISearch[] | null;
+  result: Array<IItem> | null;
   query: string | null;
   error: string | null;
   loading: boolean;
@@ -16,7 +15,7 @@ export const INITIAL_STATE = {
   result: null,
   query: null,
   error: null,
-  loading: false, 
+  loading: false,
 };
 
 export const searchReset = (state: ISearchState) => ({
@@ -34,17 +33,14 @@ export const searchFilterRequest = (state: ISearchState) => ({
 });
 export const searchRequestSuccess = (
   state: ISearchState,
-  { payload, query }: { payload: Array<ISearch>; query: string },
+  { payload, query }: { payload: Array<IItem>; query: string }
 ) => ({
   ...state,
   loading: false,
   result: payload,
   query,
 });
-export const searchRequestFailure = (
-  state: ISearchState,
-  { error }: { error: string },
-) => ({
+export const searchRequestFailure = (state: ISearchState, { error }: { error: string }) => ({
   ...state,
   loading: false,
   error,

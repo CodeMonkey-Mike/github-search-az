@@ -1,4 +1,4 @@
-import { grey300, blue500, white } from './colors';
+ 
 import styled from 'styled-components';
 import theme from 'styled-theming';
 
@@ -43,6 +43,8 @@ export const Grid = styled.div<Props>`
   padding: 24px ${gridPaddingX};
   grid-template-columns: repeat(${gridColumns}, 1fr);
   max-width: ${gridMaxWidth};
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 Grid.defaultProps = { variant: 'xl' };
@@ -52,5 +54,5 @@ interface GridCellProps {
 }
 
 export const GridCell = styled.div<GridCellProps>`
-  grid-column: span ${props => +props.span};
+  grid-column: span ${(props) => +props.span};
 `;

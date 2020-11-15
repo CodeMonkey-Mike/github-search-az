@@ -12,7 +12,7 @@ export const getCol = (clr: string, p: number) => {
     return (
       'rgb' +
       (d ? 'a(' : '(') +
-      r(i(a[3] == 'a' ? a.slice(5) : a.slice(4)) * Pxx + t) +
+      r(i(a[3] === 'a' ? a.slice(5) : a.slice(4)) * Pxx + t) +
       ',' +
       r(i(b) * Pxx + t) +
       ',' +

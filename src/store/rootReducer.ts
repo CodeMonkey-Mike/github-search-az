@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'; 
+import { combineReducers } from 'redux';
 import { RouterState, connectRouter } from 'connected-react-router';
 import { search } from './Search';
 import { History } from 'history';

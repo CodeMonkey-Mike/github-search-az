@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export const Fork: React.FC = props => {
+export const Fork: React.FC = (props) => {
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path
@@ -11,8 +11,7 @@ export const Fork: React.FC = props => {
   );
 };
 
-
-export const Code: React.FC = props => {
+export const Code: React.FC = (props) => {
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path
@@ -20,5 +19,17 @@ export const Code: React.FC = props => {
         d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"
       />
     </svg>
+  );
+};
+
+export const ChevronRight: React.FC = (props) => {
+  return (
+    <svg xmlns='http://www.w3.org/2000/svg' {...props}  viewBox='0 0 512 512'><title>Chevron Forward Circle</title><path d='M64 256c0 106 86 192 192 192s192-86 192-192S362 64 256 64 64 150 64 256z' fill='none' stroke='currentColor' strokeMiterlimit='10' stroke-width='32'/><path fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M216 352l96-96-96-96'/></svg>
+  );
+};
+
+export const Star: React.FC = (props) => {
+  return (
+    <svg xmlns='http://www.w3.org/2000/svg' {...props} viewBox='0 0 512 512'><title>Star</title><path d='M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-width='32'/></svg>
   );
 };

@@ -1,4 +1,4 @@
-import * as colors from '../../styles/colors'; 
+import * as colors from '../../styles/colors';
 import styled from 'styled-components';
 
 export const Header = styled.div`
@@ -6,7 +6,7 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${colors.grey200};  
+  background-color: ${colors.grey200};
   padding: 30px;
   flex-direction: column;
   flex-wrap: wrap;
@@ -22,3 +22,5 @@ export const Heading = styled.h1`
     color: ${colors.grey500};
   }
 `;
+
+

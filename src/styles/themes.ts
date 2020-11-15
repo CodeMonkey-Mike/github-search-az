@@ -5,8 +5,7 @@ export const themes = {
     gray: '#586069',
     'gray-light': '#6a737d',
     'gray-dark': '#24292e',
-    orange: '#f9826c',
-
+    orange: '#f9826c', 
     header: '#24292e',
     logo: '#fff',
     username: '#666',
@@ -19,7 +18,7 @@ export const themes = {
     btn: '#fdfdfd',
     repoHeader: '#f1f8ff',
 
-    tag: '#6cc644', 
+    tag: '#6cc644',
   },
   dark: {
     primary: '#1D1D1D',
@@ -27,11 +26,10 @@ export const themes = {
     gray: '#afafaf',
     'gray-light': '#6a737d',
     'gray-dark': '#c6c6c6',
-    orange: '#fff',
-
+    orange: '#fff', 
     header: '#181818',
     logo: '#fff',
-    username: '#9b9b9b', 
+    username: '#9b9b9b',
     search: 'rgba(255, 255, 255, 0.13)',
     'search-placeholder': '#c6c6c6',
     icon: '#9b9b9b',
@@ -41,7 +39,7 @@ export const themes = {
     btn: '#191919',
     repoHeader: '#182030',
 
-    tag: '#6cc644', 
+    tag: '#6cc644',
   },
 };
 

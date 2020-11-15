@@ -1,9 +1,9 @@
-import { grey500, white } from '../../../styles/colors'; 
+import { grey500, white } from '../../../styles/colors';
 import styled from 'styled-components';
 
 interface Props {
   isActive?: boolean;
-} 
+}
 
 export const SearchContainer = styled.div`
   transform: translateY(-50%);
@@ -12,21 +12,21 @@ export const SearchContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   border-radius: 10px;
-  
+
   padding: 0 20px;
 `;
 
 export const Search = styled.form<Props>`
-  position: relative;  
-  background: gray; 
+  position: relative;
+  background: gray;
   overflow: hidden;
   transition: all 0.3s;
   background: ${white};
-  height: 64px; 
+  height: 64px;
   border-radius: 10px;
-  cursor: pointer;  
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.06); 
-  & > input { 
+  cursor: pointer;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+  & > input {
     padding: 0 10px;
     position: absolute;
     top: 0;

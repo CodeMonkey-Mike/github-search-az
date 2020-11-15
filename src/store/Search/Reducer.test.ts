@@ -13,7 +13,7 @@ describe('Search - Reducer', () => {
     const node = FACTORY_SEARCH;
 
     expect(
-      Reducer.searchRequestSuccess(Reducer.INITIAL_STATE, { payload: node, query: 'string' }),
+      Reducer.searchRequestSuccess(Reducer.INITIAL_STATE, { payload: node, query: 'string' })
     ).toEqual({
       ...Reducer.INITIAL_STATE,
       query: 'string',
@@ -25,9 +25,7 @@ describe('Search - Reducer', () => {
   it('has handle search request failure', () => {
     const error = 'Error message';
 
-    expect(
-      Reducer.searchRequestFailure(Reducer.INITIAL_STATE, { error }),
-    ).toEqual({
+    expect(Reducer.searchRequestFailure(Reducer.INITIAL_STATE, { error })).toEqual({
       ...Reducer.INITIAL_STATE,
       error,
     });

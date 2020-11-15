@@ -103,7 +103,7 @@ const languageColors = {
   isabelle: '#fefe00',
   j: '#9eedff',
   java: '#b07219',
-  Javascript: '#f1e05a',
+  javascript: '#f1e05a',
   jolie: '#843179',
   jsoniq: '#40d47e',
   jsonnet: '#0064bd',

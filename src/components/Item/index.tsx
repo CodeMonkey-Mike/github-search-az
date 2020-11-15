@@ -1,47 +1,68 @@
 import React from 'react'; 
-import { createJsxAttribute } from 'typescript';
 import { Grid, GridCell } from '../../styles/Grid';
-import { Fork } from '../Icons';
+import { isMobile } from '../../styles/isMobile';
+import { ChevronRight, Fork, Star } from '../Icons';
 import { Divider } from '../Utils';
-import { ItemContainer, Link, Description, AttributeWrapper, Attribute } from './style'; 
+import { ItemContainer, Link, Description, AttributeWrapper, Attribute, WrapLink, LanguageCircle } from './style';
+
+export interface IItem {
+  id: number;
+  full_name: string;
+  html_url: string;
+  description: string;
+  language: string;
+  stargazers_count: number;
+  forks_count: number;
+}
 
 interface LayoutProps {
-  data: Array<any>;
+  data: Array<IItem>;
 }
+
 const Item = ({ data }: LayoutProps) => {
   return (
     <>
-       {data.map((item:any) => (
-        <ItemContainer key={item.id}>
-                <Grid
-                {
-                  ...{
-                    gridColumnGap: '0'
-                  }
-                }
-                >
-                  <GridCell span={'10'}>
-                    <Link href={item.html_url} target='_blank'>
-                    {item.full_name}
-                    </Link>
-                    <Description>{item.description}</Description>
-                  </GridCell>
-                  <GridCell span={'6'}>
-                      <Link href={item.html_url} target='_blank'>Explore</Link>
-                  </GridCell>
-                  <GridCell span={'16'}>
-                    <AttributeWrapper>
-                      <Attribute language={item.language}><span></span>{item.language}</Attribute>
-                      <Attribute><Fork />{item.forks_count}</Attribute>
-                      <Attribute>{item.stargazers_count}</Attribute>
-                    </AttributeWrapper>
-                  </GridCell>
-                </Grid>
-                <Divider fluid marginTop={20}/>
+      {data.map((item: IItem) => (
+        <ItemContainer key={item.id} data-testid={`search-item${item.id}`}>
+          <Grid
+            {...{
+              gridColumnGap: '0',
+            }}
+            variant={isMobile() ? 'sm' : 'lg'}
+          >
+            <GridCell span={isMobile() ? '16':'10'}>
+              <Link href={item.html_url} target="_blank">
+                {item.full_name}
+              </Link>
+              <Description>{item.description}</Description> 
+            </GridCell>
+            <GridCell span={isMobile() ? '16' : '6'}>
+              <WrapLink isMobile={isMobile()}>
+                <Link className={'explore-link'} href={item.html_url} target="_blank">
+                  Explore <ChevronRight />
+                </Link> 
+              </WrapLink>
+            </GridCell>
+            <GridCell span={'16'}>
+              <AttributeWrapper>
+                { item.language && <Attribute >
+                  <LanguageCircle language={item.language} />
+                  <span>{item.language}</span>
+                </Attribute>}
+                
+                <Attribute>
+                  <Fork />
+                  <span>{item.forks_count}</span>
+                </Attribute>
+                <Attribute><Star /><span>{item.stargazers_count}</span></Attribute>
+              </AttributeWrapper>
+            </GridCell>
+          </Grid>
+          <Divider fluid marginTop={20} />
         </ItemContainer>
-              ))} 
+      ))}
     </>
   );
 };
 
-export {Item};
+export { Item };
