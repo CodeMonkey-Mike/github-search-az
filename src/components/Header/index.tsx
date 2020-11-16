@@ -28,7 +28,7 @@ const Main = ({ onChangeTheme }: IHeaderProps) => {
             </div>
           </label>
         </div>
-        <Heading data-testid="Heading">
+        <Heading data-testid="heading">
           Github <sup>Search</sup>
         </Heading>
       </Header>

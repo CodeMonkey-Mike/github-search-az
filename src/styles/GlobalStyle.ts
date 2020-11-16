@@ -1,5 +1,5 @@
 import { grey500, black } from './colors';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     overflow-x: hidden;
     min-height: 100%;
+    height: 100%;
   }
 
   body {
@@ -29,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     color: ${grey500};
     font-size: 1rem;
-
+    height: 100%;
     &::-webkit-scrollbar {
       width: 8px;
       background-color: #f5f5f5;
@@ -41,14 +42,17 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  #root {
+    height: 100%;
+  }
+
   :root {
     ${(props) => {
-      const { theme } = props;
-      console.log(props);
+      const { withMode } = props.theme as DefaultTheme & {withMode: string}; 
       let append = '';
-      // Object.entries(theme).forEach(([prop, value]) => {
-      //   append += `--${prop}: ${value};`;
-      // });
+      Object.entries(withMode).forEach(([prop, value]) => {
+        append += `--${prop}: ${value};`;
+      });
 
       return append;
     }}

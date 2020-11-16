@@ -5,10 +5,6 @@ interface Props {
   variant?: 'xl' | 'lg' | 'md' | 'sm';
 }
 
-const gridMinWidth: theme.ThemeSet = theme.variants('mode', 'variant', {
-  xl: { ccad: '1280px' },
-});
-
 const gridMaxWidth: theme.ThemeSet = theme.variants('mode', 'variant', {
   lg: { ccad: '1279px' },
   md: { ccad: '1023px' },

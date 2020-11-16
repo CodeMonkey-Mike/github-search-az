@@ -6,7 +6,7 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${colors.grey200};
+  background-color: var(--gray-light);
   padding: 30px;
   flex-direction: column;
   flex-wrap: wrap;
@@ -17,8 +17,9 @@ export const Heading = styled.h1`
   width: 100%;
   text-align: center;
   margin-top: 0;
+  color: var(--header);
   sup {
     font-size: 14px;
-    color: ${colors.grey500};
+    color: var(--header)
   }
 `;

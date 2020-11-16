@@ -9,7 +9,7 @@ interface LayoutProps {
 }
 const List = ({ loading, children }: LayoutProps) => {
   return (
-    <ListContainer>
+    <ListContainer data-testid='list'>
       {loading ? (
         <>
           <Grid>

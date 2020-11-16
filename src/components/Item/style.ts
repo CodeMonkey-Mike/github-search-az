@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import languageColors from '../../styles/languageColors';
 import _get from 'lodash/get';
-import { grey200, grey500 } from '../../styles/colors';
+import {  grey500 } from '../../styles/colors';
 import { Para } from '../../styles/Para';
 
 export const ItemContainer = styled.div``;
@@ -28,6 +28,7 @@ export const Link = styled.a`
   margin-bottom 10px;
   display: block;
   word-break: break-word;
+  color: var(--link);
   &:hover {
     text-decoration: underline;
   }
@@ -45,7 +46,8 @@ export const Link = styled.a`
     align-self: flex-end;
     font-size: 18px;
     &:hover {
-      background: ${grey200};
+      background: var(--link-hover);
+      color: var(--text-hover);
       text-decoration: none;
     }
     svg {

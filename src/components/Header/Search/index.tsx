@@ -3,6 +3,7 @@ import { Search, SearchContainer } from './style';
 import debounce from 'lodash/debounce';
 import { useDispatch } from 'react-redux';
 import { Actions } from '../../../store/Search';
+import {RemoveIcon, SearchIcon} from '../../';
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -30,35 +31,9 @@ const Main = () => {
     <SearchContainer data-testid="search-wrapper">
       <Search>
         {q ? (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={() => setQ('')}>
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="32"
-              d="M368 368L144 144M368 144L144 368"
-            />
-          </svg>
+          <RemoveIcon onClick={()=>setQ('')}/>
         ) : (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <title>Search</title>
-            <path
-              d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
-              fill="none"
-              stroke="currentColor"
-              strokeMiterlimit="10"
-              strokeWidth="32"
-            />
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              strokeWidth="32"
-              d="M338.29 338.29L448 448"
-            />
-          </svg>
+          <SearchIcon />
         )}
         <input
           data-testid="search-input"

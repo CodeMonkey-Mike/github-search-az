@@ -3,10 +3,11 @@ import { History } from 'history';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import { ConnectedRouter } from 'connected-react-router';
+import { ThemeProvider } from 'styled-components';
 import Routes from './Routes';
 import { AppState } from './store/rootReducer';
 import { ThemeName, themes } from './styles/themes';
-import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './styles/GlobalStyle';
 import './index.css';
 
 interface AppProps {
@@ -20,9 +21,10 @@ const App = ({ store, history }: AppProps) => {
   );
   const currentTheme = themes[themeName];
   return (
-    <ThemeProvider theme={{ currentTheme, mode: 'ccad' }}>
+    <ThemeProvider theme={{ mode: 'ccad', withMode: currentTheme }}>
       <Provider store={store}>
         <ConnectedRouter history={history}>
+          <GlobalStyle />
           <Routes theme={themeName} onChange={setThemeName} />
         </ConnectedRouter>
       </Provider>

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const Layout = styled.div`
-  overflow: auto;
+export const Layout = styled.div` 
+  background: var(--primary);
+  height: 100%;
 `;
 
 export const MainContainer = styled.div`

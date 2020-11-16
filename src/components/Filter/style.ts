@@ -31,7 +31,8 @@ export const Pill = styled.span<IPillProps>`
   border: 1px solid ${colors.grey200};
   border-radius: 15px;
   &:hover {
-    background: ${colors.grey200};
+    background: var(--link-hover);
+    color: var(--pill-hover);
   }
   margin-bottom: 5px;
   ${({ active }) => active && `background: ${colors.grey200};`}

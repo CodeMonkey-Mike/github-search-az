@@ -61,11 +61,11 @@ const Item = ({ data }: LayoutProps) => {
                 )}
 
                 <Attribute>
-                  <Fork />
+                  <Fork fill='var(--gray-dark)'/>
                   <span>{item.forks_count}</span>
                 </Attribute>
                 <Attribute>
-                  <Star />
+                  <Star fill='var(--gray-dark)'/>
                   <span>{item.stargazers_count}</span>
                 </Attribute>
               </AttributeWrapper>

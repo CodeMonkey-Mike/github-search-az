@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Fork: React.FC = (props) => {
+export const Fork = ({fill, ...props}: any) => {
   return (
-    <svg viewBox="0 0 16 16" {...props}>
+    <svg viewBox="0 0 16 16" fill={fill} {...props}>
       <path
         fillRule="evenodd"
         d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"
@@ -11,7 +11,7 @@ export const Fork: React.FC = (props) => {
   );
 };
 
-export const Code: React.FC = (props) => {
+export const Code = ({fill, ...props}: any) => {
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path
@@ -22,7 +22,7 @@ export const Code: React.FC = (props) => {
   );
 };
 
-export const ChevronRight: React.FC = (props) => {
+export const ChevronRight = ({fill, ...props}: any) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" {...props} viewBox="0 0 512 512">
       <title>Chevron Forward Circle</title>
@@ -45,7 +45,7 @@ export const ChevronRight: React.FC = (props) => {
   );
 };
 
-export const Star: React.FC = (props) => {
+export const Star = ({fill, ...props}: any) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" {...props} viewBox="0 0 512 512">
       <title>Star</title>
@@ -53,8 +53,46 @@ export const Star: React.FC = (props) => {
         d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
         fill="none"
         stroke="currentColor"
-        stroke-linejoin="round"
-        stroke-width="32"
+        strokeLinejoin="round"
+        strokeWidth="32"
+      />
+    </svg>
+  );
+};
+
+export const RemoveIcon = ({fill, ...props}: any) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+        d="M368 368L144 144M368 144L144 368"
+      />
+    </svg>
+  );
+};
+
+export const SearchIcon = ({fill, ...props}: any) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <title>Search</title>
+      <path
+        d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+        fill="none"
+        stroke="currentColor"
+        strokeMiterlimit="10"
+        strokeWidth="32"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeMiterlimit="10"
+        strokeWidth="32"
+        d="M338.29 338.29L448 448"
       />
     </svg>
   );

@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Objective
 
-The app also knows as a small Github search application with a specific search per user. The user is able to filter the repository by owner or member.
+The app also knows as a small Github search application with a specific search per user. The user are able to filter the repository by owner or member.
 
 ## Tech Stack
 
@@ -37,7 +37,7 @@ If you would like run the app under local try with these step:
 yarn && yarn dev
 ```
 
-## Architecure explains
+## Architecture explains
 
 ### Folder structure
 
@@ -117,11 +117,6 @@ yarn test
 The command to execute test and coverage:
 
 ```
-yarn converage
+yarn coverage
 ```
-
-## Next resolution
-
-- On the screen, the user can see a switch button on the top-left, its ability to interact but the feature did not available yet. We would like to improve it afterward.
-- On the search result, the user can see the count of repos that searched, we would like to implement one pagination that allows user able to go through the next page.
 
